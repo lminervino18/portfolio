@@ -1,42 +1,62 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+:root {
+  --background-color: #2a003f; /* violeta oscuro */
+  --text-color: #ffffff;
+  --accent-color: #8000ff; /* acento violeta fuerte */
+  --accent-hover: #555;
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  color: var(--accent-color);
+}
+
+nav.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  background-color: var(--background-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+
+nav.navbar ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav.navbar li a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+nav.navbar li a:hover {
+  background-color: var(--accent-hover);
+}
+
+main {
   padding: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
   text-align: center;
-}
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
-}
-
-.card {
-  padding: 2em;
-}
-
-.read-the-docs {
-  color: #888;
 }

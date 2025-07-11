@@ -1,6 +1,8 @@
 export const COLORS = {
-  background: 'var(--color-bg)',
-  text: 'var(--color-text)',
-  primary: 'var(--color-primary)',
-  secondary: 'var(--color-secondary)',
-};
+  background: '#2a003f',
+  textPrimary: '#ffffff',
+  textSecondary: '#000000',
+  accent: '#8000ff',
+  border: '#ffffff',
+  muted: '#555555',
+}
