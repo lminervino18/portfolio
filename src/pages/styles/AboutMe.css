@@ -1,0 +1,45 @@
+.about-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  perspective: 1000px;
+}
+
+.profile-img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 20px #ffffff88;
+  transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
+  transform-style: preserve-3d;
+}
+
+.profile-img:hover {
+  transform: rotateY(20deg) rotateX(10deg) scale(1.05);
+  box-shadow: 0 0 40px #8000ffaa, 0 10px 20px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.2) drop-shadow(0 0 8px #8000ff);
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 10px #8000ff;
+}
+
+p {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
