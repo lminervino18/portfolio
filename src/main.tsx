@@ -9,3 +9,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     <App />
   </React.StrictMode>,
 )
+
+window.addEventListener('load', () => {
+  document.body.style.overflow = 'auto'
+})

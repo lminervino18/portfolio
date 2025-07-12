@@ -3,7 +3,7 @@ import { AboutMe } from './pages/AboutMe'
 import { Projects } from './pages/Projects'
 import { NavBar } from './components/NavBar'
 import Particles from './components/Particles'
-import './App.css'
+import './styles/global.css'
 
 function App() {
   return (
