@@ -42,8 +42,9 @@ export function AboutMe() {
           </div>
 
           <a href="/src/assets/me/cv.pdf" target="_blank" className="cv-button">
-            Download CV
+            <span>Download CV</span>
           </a>
+
         </div>
 
         <div className="about-right">
