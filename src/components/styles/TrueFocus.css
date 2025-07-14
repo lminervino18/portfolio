@@ -4,12 +4,12 @@
   gap: 1em;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
 }
 
 .focus-word {
   position: relative;
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 900;
   cursor: pointer;
   transition:

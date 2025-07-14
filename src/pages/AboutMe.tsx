@@ -64,13 +64,13 @@ export function AboutMe() {
               . I enjoy web design, distributed systems, data science, neural networks, and best practices.
             </p>
           </div>
+
+          <section className="tech-section">
+            <h2>Technologies</h2>
+            <TechGrid />
+          </section>
         </div>
       </motion.section>
-
-      <section className="tech-section">
-        <h2>Technologies</h2>
-        <TechGrid />
-      </section>
     </div>
   )
 }

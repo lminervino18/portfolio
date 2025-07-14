@@ -1,6 +1,6 @@
 .about-container {
   width: 100%;
-  padding: 4rem 2rem;
+  padding: 5rem 3rem;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -10,11 +10,11 @@
 .about-content {
   display: flex;
   flex-wrap: wrap;
-  gap: 3rem;
-  justify-content: center;
+  gap: 4rem;
+  justify-content: space-between;
   align-items: flex-start;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .about-left {
@@ -22,13 +22,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2.5rem;
 }
 
 .profile-img {
-  width: 180px;
-  height: 180px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
-  margin-bottom: 1.2rem;
   box-shadow: 0 0 20px #ffffff88;
   transition: transform 0.5s ease, box-shadow 0.5s ease, filter 0.5s ease;
 }
@@ -41,10 +41,10 @@
 .name-age-wrapper {
   display: flex;
   align-items: center;
-  gap: 1rem;
-  margin: 1.2rem 0;
+  gap: 1.2rem;
   flex-wrap: wrap;
   justify-content: center;
+  margin: 0;
 }
 
 .age-number {
@@ -63,8 +63,8 @@
 }
 
 .cv-button {
-  margin-top: 1rem;
-  padding: 0.6rem 1.4rem;
+  margin-top: 1.5rem;
+  padding: 0.6rem 1.6rem;
   font-size: 1rem;
   background-color: #8000ff;
   color: white;
@@ -82,26 +82,33 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  gap: 2.5rem;
 }
 
 .simple-box {
   border: 2px solid #8000ff;
   border-radius: 12px;
-  padding: 2rem;
+  padding: 2.5rem;
   box-shadow: 0 0 15px #8000ff66;
   background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
 }
 
 .about-text {
-  font-size: 1.25rem;
-  line-height: 1.8;
+  font-size: 1.3rem;
+  line-height: 1.9;
   color: #e0e0e0;
 }
 
 .link-highlight {
   color: #a076ff;
   text-decoration: underline;
+}
+
+.truefocus-inline {
+  font-size: 1.5rem;
+  white-space: nowrap;
+  text-align: center;
 }
 
 .fiuba-highlight {
@@ -127,35 +134,43 @@
   display: block;
 }
 
-/* Tech section separate */
-.tech-section {
-  margin-top: 3rem;
-  text-align: center;
-  width: 100%;
-  max-width: 1000px;
-}
-
-.tech-section h2 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: #ffffff;
-  text-shadow: 0 0 8px #8000ff;
-}
-
-.tech-grid {
-  display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 1rem;
-}
-
 .tech-card {
   padding: 0.4rem;
   height: auto;
+  border: 1.5px solid #8000ff;
+  border-radius: 8px;
+  background-color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 10px #8000ff66;
+}
+.tech-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #a14bff88;
 }
 
 .tech-logo {
-  width: 45px;
-  height: 45px;
+  width: 65px;
+  height: 65px;
   object-fit: contain;
-  filter: drop-shadow(0 0 4px #8000ff88);
+  filter: drop-shadow(0 0 6px #8000ff88);
 }
+
+
+.tech-section {
+  margin-top: 3rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tech-section h2 {
+  font-size: 2rem;
+  color: #d18aff;
+  margin-bottom: 2rem;
+}
+
