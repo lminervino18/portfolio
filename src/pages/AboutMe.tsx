@@ -5,6 +5,7 @@ import CountUp from '../components/CountUp'
 import TrueFocus from '../components/TrueFocus'
 import { motion } from 'framer-motion'
 import { useRef } from 'react'
+import VariableProximity from '../components/VariableProximity'
 
 export function AboutMe() {
   const containerRef = useRef<HTMLDivElement>(null)
@@ -47,12 +48,24 @@ export function AboutMe() {
 
         <div className="about-right">
           <div className="simple-box">
-            <p className="about-text">
-              I'm in my final year of{' '}
+            <div className="about-text">
+              <VariableProximity
+                fromFontVariationSettings="'wght' 300"
+                toFontVariationSettings="'wght' 900"
+                containerRef={containerRef as React.RefObject<HTMLElement>}
+              >
+                I'm in my final year of
+              </VariableProximity>{' '}
               <a href="/src/assets/me/ing.pdf" target="_blank" className="link-highlight">
                 Computer Engineering
               </a>{' '}
-              at{' '}
+              <VariableProximity
+                fromFontVariationSettings="'wght' 300"
+                toFontVariationSettings="'wght' 900"
+                containerRef={containerRef as React.RefObject<HTMLElement>}
+              >
+                at
+              </VariableProximity>{' '}
               <span className="fiuba-highlight">
                 FIUBA
                 <img
@@ -61,8 +74,14 @@ export function AboutMe() {
                   className="preview-image"
                 />
               </span>
-              . I enjoy web design, distributed systems, data science, neural networks, and best practices.
-            </p>
+              <VariableProximity
+                fromFontVariationSettings="'wght' 300"
+                toFontVariationSettings="'wght' 900"
+                containerRef={containerRef as React.RefObject<HTMLElement>}
+              >
+                . I enjoy web design, distributed systems, data science, neural networks, and best practices.
+              </VariableProximity>
+            </div>
           </div>
 
           <section className="tech-section">

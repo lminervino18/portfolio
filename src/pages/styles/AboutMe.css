@@ -63,9 +63,9 @@
 }
 
 .cv-button {
-  margin-top: 1.5rem;
+  margin-top: 0.5rem;
   padding: 0.6rem 1.6rem;
-  font-size: 1rem;
+  font-size: 1.3rem;
   background-color: #8000ff;
   color: white;
   border-radius: 8px;
@@ -102,7 +102,6 @@
 
 .link-highlight {
   color: #a076ff;
-  text-decoration: underline;
 }
 
 .truefocus-inline {
@@ -160,7 +159,7 @@
 
 
 .tech-section {
-  margin-top: 3rem;
+  margin-top: 1.6rem;
   width: 100%;
   display: flex;
   flex-direction: column;
