@@ -58,7 +58,7 @@ export const projects: Project[] = [
   {
     title: "Fox and Geese Game",
     description: "A multiplayer terminal-based game implemented entirely in x86-64 assembly, where one player controls a fox and the other controls geese. The game logic, rendering, and interaction are all handled at a low level, demonstrating direct memory manipulation and input handling.",
-    videoUrl: "zorros-y-cosas.mp4",
+    videoUrl: "zorros-y-ocas.mp4",
     githubRepo: "https://github.com/Bastian1998/Zorro-y-Ocas",
     teammateRepos: [],
     technologies: ["Assembly (x86-64)"],
@@ -67,7 +67,7 @@ export const projects: Project[] = [
   {
   title: "Mi Colección de Camisetas",
   description: "A full-featured web app to manage a personal football jersey collection. Users can upload images, edit detailed information, filter items, and explore interactive statistics and insights about their collection through a modern interface.",
-  videoUrl: "mi-coleccion-camisetas.mp",
+  videoUrl: "mi-coleccion-camisetas.mp4",
   githubRepo: "https://github.com/lminervino18/mi-coleccion-camisetas",
   teammateRepos: [],
   technologies: ["React", "JavaScript", "CSS", "MySQL"],
