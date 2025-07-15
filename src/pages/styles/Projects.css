@@ -31,7 +31,7 @@
   border: 2px solid var(--violet);
   border-radius: 12px;
   padding: 1.5rem;
-  max-width: 1100px;
+  max-width: 1700px;
   width: 100%;
   color: white;
 }
@@ -60,15 +60,26 @@
   border: 2px solid var(--violet);
   border-radius: 8px;
   overflow: hidden;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .proj-video-container video {
   width: 100%;
-  max-height: 400px;
-  height: auto;
+  height: 100%;
+  object-fit: contain;
   display: block;
   background: black;
+  border-radius: inherit;
 }
+
+
+
+
 
 .proj-info {
   display: flex;
