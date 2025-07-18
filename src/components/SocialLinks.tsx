@@ -15,7 +15,11 @@ export function SocialLinks() {
         </a>
       </li>
       <li>
-        <a href="mailto:lminervino18@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://mail.google.com/mail/?view=cm&to=lminervino18@gmail.com"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FaEnvelope className="social-icon" />
         </a>
       </li>

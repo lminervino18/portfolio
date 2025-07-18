@@ -4,13 +4,15 @@ import { SocialLinks } from '../components/SocialLinks'
 import CountUp from '../components/CountUp'
 import TrueFocus from '../components/TrueFocus'
 import { motion } from 'framer-motion'
-import { useRef } from 'react'
+import { useMemo, useRef } from 'react'
 import VariableProximity from '../components/VariableProximity'
 
-export function AboutMe() {
-  const containerRef = useRef<HTMLDivElement>(null)
-  const birthDate = new Date('2000-07-13')
-  const age = Math.floor((Date.now() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25))
+  export function AboutMe() {
+    const containerRef = useRef<HTMLDivElement>(null)
+    const age = useMemo(() => {
+    const birthDate = new Date('2000-07-13')
+    return Math.floor((Date.now() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25))
+  }, [])
 
   return (
     <div className="about-container" ref={containerRef}>
@@ -42,7 +44,7 @@ export function AboutMe() {
           </div>
 
           <a href="/src/assets/me/cv.pdf" target="_blank" className="cv-button">
-            <span>Download CV</span>
+            <span>CV</span>
           </a>
 
         </div>
@@ -71,7 +73,7 @@ export function AboutMe() {
                 FIUBA
                 <img
                   src="/src/assets/me/fiuba.jpeg"
-                  alt="FIUBA preview"
+                  alt="FIUBA photo"
                   className="preview-image"
                 />
               </span>

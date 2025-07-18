@@ -31,3 +31,15 @@
   object-fit: contain;
   filter: drop-shadow(0 0 6px #8000ff88);
 }
+
+@media (max-width: 768px) {
+  .tech-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .tech-logo {
+    width: 50px;
+    height: 50px;
+  }
+}

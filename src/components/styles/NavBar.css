@@ -39,3 +39,21 @@
   box-shadow: 0 0 10px #8000ff88;
   text-shadow: 0 0 8px #8000ff, 0 0 12px #ffffff77;
 }
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 1rem 1.5rem;
+    top: 10px;
+    border-radius: 12px;
+  }
+
+  .navbar ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .navbar li a {
+    font-size: 1.1rem;
+    padding: 0.4rem 1rem;
+  }
+}

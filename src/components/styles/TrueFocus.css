@@ -67,3 +67,20 @@
   border-left: none;
   border-top: none;
 }
+
+@media (max-width: 768px) {
+  .focus-container {
+    flex-wrap: wrap;
+    gap: 0.6em;
+  }
+
+  .focus-word {
+    font-size: 1.2rem;
+  }
+
+  .corner {
+    width: 0.8rem;
+    height: 0.8rem;
+    border-width: 2px;
+  }
+}

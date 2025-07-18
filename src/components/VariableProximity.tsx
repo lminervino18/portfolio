@@ -5,7 +5,6 @@ import "./styles/VariableProximity.css";
 
 type Callback = () => void;
 
-// Hook para animar frame a frame
 function useAnimationFrame(callback: Callback) {
   useEffect(() => {
     let frameId: number;
@@ -18,7 +17,6 @@ function useAnimationFrame(callback: Callback) {
   }, [callback]);
 }
 
-// Hook para controlar la posición del mouse relativa a un contenedor
 function useMousePositionRef(containerRef: RefObject<HTMLElement>) {
   const positionRef = useRef({ x: 0, y: 0 });
   useEffect(() => {
@@ -107,7 +105,6 @@ const VariableProximity = forwardRef<HTMLSpanElement, VariableProximityProps>((p
 
   });
 
-  // Componente para renderizar palabra con animación por letra
   function AnimatedWord({ word }: { word: string }) {
     const letterRefs = useRef<(HTMLSpanElement | null)[]>([]);
     const interpolatedRef = useRef<string[]>([]);

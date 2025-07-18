@@ -62,21 +62,6 @@
   color: #d18aff;
 }
 
-.cv-button {
-  margin-top: 0.5rem;
-  padding: 0.6rem 1.6rem;
-  font-size: 1.3rem;
-  background-color: #8000ff;
-  color: white;
-  border-radius: 8px;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease;
-}
-.cv-button:hover {
-  background-color: #a44dff;
-  transform: scale(1.05);
-}
-
 .about-right {
   flex: 2;
   display: flex;
@@ -215,4 +200,60 @@
 .cv-button span {
   position: relative;
   z-index: 1;
+}
+
+
+@media (max-width: 768px) {
+  .about-container {
+    padding: 2rem 1rem;
+  }
+
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+  }
+
+  .about-left,
+  .about-right {
+    width: 100%;
+    align-items: center;
+    text-align: center;
+  }
+
+  .simple-box {
+    padding: 1.5rem;
+  }
+
+  .profile-img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .age-number {
+    font-size: 1.8rem;
+  }
+
+  .age-label-inline {
+    font-size: 1rem;
+  }
+
+  .tech-logo {
+    width: 50px;
+    height: 50px;
+  }
+
+  .tech-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .cv-button {
+    font-size: 1rem;
+    padding: 0.6rem 1.4rem;
+  }
+
+  .fiuba-highlight .preview-image {
+    width: 90vw;
+    max-width: 300px;
+  }
 }
