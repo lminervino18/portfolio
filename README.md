@@ -1,69 +1,51 @@
-# React + TypeScript + Vite
+# Personal Portfolio – Lorenzo Minervino
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is my personal portfolio built with React, TypeScript and Vite. It showcases my academic background, skills, and selected projects as a Computer Engineering student.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+This project combines a clean UI with responsive design and subtle interactions, all optimized for performance and accessibility.
 
-## Expanding the ESLint configuration
+- Built with **React + Vite + TypeScript**
+- Animations powered by **Framer Motion**
+- Uses [React Bits](https://reactbits.dev/) for high-quality reusable components
+- Fully responsive layout
+- Modular architecture with reusable hooks and logic
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Screenshots
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+### About Me
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+![About Me](./src/assets/readme/about-me.png)
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+### Projects
+
+![Projects](./src/assets/readme/projects.png)
+
+## Stack and Tooling
+
+- **React + TypeScript + Vite** for fast development and build performance
+- **Framer Motion** for smooth and declarative animations
+- **Custom Hooks** for handling proximity effects and interactivity
+- **ESLint + TypeScript ESLint** with optional type-aware linting
+- **React Bits** components for flexible and accessible UI primitives
+
+## Getting Started
+
+To install dependencies and start the development server:
+
+```bash
+npm install
+npm run dev
 ```
+Requires Node.js 18+
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## React Bits
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+This project uses React Bits, a modern component library offering composable and accessible building blocks for React. It helped accelerate the layout and structure of this site while maintaining flexibility and performance.
 
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## Contact
+
+You can connect with me on [LinkedIn](https://www.linkedin.com/in/lorenzominervino/) or visit my [GitHub](https://github.com/lminervino18).
+
+Email: lminervino18@gmail.com
