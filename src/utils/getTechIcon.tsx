@@ -17,5 +17,5 @@ export function getTechIcon(tech: string): string {
   }
 
   const fileName = mapping[tech] || tech.toLowerCase().replace(/\s+/g, '') + ".png"
-  return `/src/assets/technologies/${fileName}`
+  return `/public/assets/technologies/${fileName}`
 }

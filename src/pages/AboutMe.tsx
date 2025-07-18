@@ -23,7 +23,7 @@ import VariableProximity from '../components/VariableProximity'
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
         <div className="about-left">
-          <img src="/src/assets/me/logo.jpeg" alt="Profile" className="profile-img" />
+          <img src="/public/assets/me/logo.jpeg" alt="Profile" className="profile-img" />
 
           <SocialLinks />
 
@@ -43,7 +43,7 @@ import VariableProximity from '../components/VariableProximity'
             </div>
           </div>
 
-          <a href="/src/assets/me/cv.pdf" target="_blank" className="cv-button">
+          <a href="/public/assets/me/cv.pdf" target="_blank" className="cv-button">
             <span>CV</span>
           </a>
 
@@ -59,7 +59,7 @@ import VariableProximity from '../components/VariableProximity'
               >
                 I'm in my final year of
               </VariableProximity>{' '}
-              <a href="/src/assets/me/ing.pdf" target="_blank" className="link-highlight">
+              <a href="/public/assets/me/ing.pdf" target="_blank" className="link-highlight">
                 Computer Engineering
               </a>{' '}
               <VariableProximity
@@ -72,7 +72,7 @@ import VariableProximity from '../components/VariableProximity'
               <span className="fiuba-highlight">
                 FIUBA
                 <img
-                  src="/src/assets/me/fiuba.jpeg"
+                  src="/public/assets/me/fiuba.jpeg"
                   alt="FIUBA photo"
                   className="preview-image"
                 />
