@@ -107,7 +107,7 @@ export function Projects() {
                 controls
                 playsInline
               >
-                <source src={`/public/assets/projects_videos/${current.videoUrl}`} type="video/mp4" />
+                <source src={`/assets/projects_videos/${current.videoUrl}`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>

@@ -22,7 +22,7 @@ export const TechGrid: React.FC<Props> = ({ items }) => {
           rel="noopener noreferrer"
         >
           <img
-            src={`/public/assets/technologies/${tech.logo}`}
+            src={`/assets/technologies/${tech.logo}`}
             alt={tech.name}
             className="tech-logo"
           />
