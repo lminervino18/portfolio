@@ -88,7 +88,7 @@ import VariableProximity from '../components/VariableProximity'
           </div>
 
           <section className="tech-section">
-            <h2>Technologies</h2>
+            <h2>Technologies I Use</h2>
             <TechGrid />
           </section>
         </div>
