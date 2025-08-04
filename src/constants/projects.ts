@@ -10,24 +10,6 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Multiplayer Hangman Game",
-    description: "A personal project built in Python using Pygame. It's a two-player version of the classic Hangman game, featuring a full dictionary word pool, player turn-based guessing, images, background music, and a fun interactive game flow.",
-    videoUrl: "hangman.mp4",
-    githubRepo: "https://github.com/lminervino18/HangmanGame",
-    teammateRepos: [],
-    technologies: ["Python", "Pygame"],
-    year: 2021,
-  },
-  {
-    title: "Pokédex App",
-    description: "A solo project written in Python that simulates a Pokédex. Users can browse Pokémon, search by name, and build custom teams from the collection. It features an interactive interface and image-based display using a custom graphical library.",
-    videoUrl: "pokedex.mp4",
-    githubRepo: "https://github.com/lminervino18/Pokedex",
-    teammateRepos: [],
-    technologies: ["Python"],
-    year: 2021,
-  },
-    {
     title: "Rustic Airlines",
     description: "A distributed flight management system developed in Rust, featuring a Cassandra-compatible database engine, real-time tracking on a world map, and a flight simulator. It supports strong and weak consistency levels, multi-node replication, and fault tolerance.",
     videoUrl: "rustic-airlines.mp4",
@@ -39,8 +21,21 @@ export const projects: Project[] = [
     ],
     technologies: ["Rust"],
     year: 2024
-    },
-    {
+  },
+  {
+    title: "ClassConnect",
+    description: "A full-stack educational management platform enabling seamless interaction between students and teachers. It includes course and assignment management, exams, feedback, real-time chat, analytics, and an AI assistant integrated into the mobile app.",
+    videoUrl: "classconnect.mp4",
+    githubRepo: "https://github.com/IS2-Class-Connect",
+    teammateRepos: [
+      "https://github.com/mbianchif",
+      "https://github.com/Manuel-Pol",
+      "https://github.com/s-g-u"
+    ],
+    technologies: ["React Native", "TypeScript", "Python", "Docker", "Firebase", "PostgreSQL", "MongoDB"],
+    year: 2025
+  },
+  {
     title: "Gastandoando",
     description: "A collaborative web app built with React and TypeScript for organizing personal and group expenses, managing savings, and forecasting future spending. Designed to simplify financial planning and sharing within groups.",
     videoUrl: "gastando-ando.mp4",
@@ -56,6 +51,15 @@ export const projects: Project[] = [
     year: 2024
   },
   {
+    title: "Mi Colección de Camisetas",
+    description: "A full-featured web app to manage a personal football jersey collection. Users can upload images, edit detailed information, filter items, and explore interactive statistics and insights about their collection through a modern interface.",
+    videoUrl: "mi-coleccion-camisetas.mp4",
+    githubRepo: "https://github.com/lminervino18/mi-coleccion-camisetas",
+    teammateRepos: [],
+    technologies: ["React", "JavaScript", "CSS", "Java","MySQL"],
+    year: 2024
+  },
+  {
     title: "Fox and Geese Game",
     description: "A multiplayer terminal-based game implemented entirely in x86-64 assembly, where one player controls a fox and the other controls geese. The game logic, rendering, and interaction are all handled at a low level, demonstrating direct memory manipulation and input handling.",
     videoUrl: "zorros-y-ocas.mp4",
@@ -65,25 +69,21 @@ export const projects: Project[] = [
     year: 2024
   },
   {
-  title: "Mi Colección de Camisetas",
-  description: "A full-featured web app to manage a personal football jersey collection. Users can upload images, edit detailed information, filter items, and explore interactive statistics and insights about their collection through a modern interface.",
-  videoUrl: "mi-coleccion-camisetas.mp4",
-  githubRepo: "https://github.com/lminervino18/mi-coleccion-camisetas",
-  teammateRepos: [],
-  technologies: ["React", "JavaScript", "CSS", "MySQL"],
-  year: 2024
-},{
-  title: "ClassConnect",
-  description: "A full-stack educational management platform enabling seamless interaction between students and teachers. It includes course and assignment management, exams, feedback, real-time chat, analytics, and an AI assistant integrated into the mobile app.",
-  videoUrl: "classconnect.mp4",
-  githubRepo: "https://github.com/IS2-Class-Connect",
-  teammateRepos: [
-    "https://github.com/mbianchif",
-    "https://github.com/Manuel-Pol",
-    "https://github.com/s-g-u"
-  ],
-  technologies: ["React Native", "TypeScript", "Python", "Docker", "Firebase", "PostgreSQL", "MongoDB"],
-  year: 2025
-}
-
+    title: "Multiplayer Hangman Game",
+    description: "A personal project built in Python using Pygame. It's a two-player version of the classic Hangman game, featuring a full dictionary word pool, player turn-based guessing, images, background music, and a fun interactive game flow.",
+    videoUrl: "hangman.mp4",
+    githubRepo: "https://github.com/lminervino18/HangmanGame",
+    teammateRepos: [],
+    technologies: ["Python", "Pygame"],
+    year: 2021
+  },
+  {
+    title: "Pokédex App",
+    description: "A project written in Python that simulates a Pokédex. Users can browse Pokémon, search by name, and build custom teams from the collection. It features an interactive interface and image-based display using a custom graphical library.",
+    videoUrl: "pokedex.mp4",
+    githubRepo: "https://github.com/lminervino18/Pokedex",
+    teammateRepos: ["https://github.com/Manuel-Pol"],
+    technologies: ["Python"],
+    year: 2021
+  }
 ]
