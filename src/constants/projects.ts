@@ -36,6 +36,35 @@ export const projects: Project[] = [
     year: 2025
   },
   {
+    title: "Mi Colección de Camisetas",
+    description: "A full-featured web app to manage a personal football jersey collection. Users can upload images, edit detailed information, filter items, and explore interactive statistics and insights about their collection through a modern interface.",
+    videoUrl: "mi-coleccion-camisetas.mp4",
+    githubRepo: "https://github.com/lminervino18/mi-coleccion-camisetas",
+    teammateRepos: [],
+    technologies: ["React", "JavaScript", "CSS", "Java","MySQL"],
+    year: 2024
+  },
+  {
+  "title": "AI Drawing Arm",
+  "description": "An AI-powered robotic arm that interprets natural language prompts and draws symbolic figures on a 14×10 grid using OpenAI and inverse kinematics. The system validates and centers shapes, translates them into optimized servo angles, and controls a dual-arm mechanism via Arduino for precise, coordinated drawing.",
+  "videoUrl": "ai-arm-drawing.mp4",
+  "githubRepo": "https://github.com/lminervino18/ai-arm-drawing",
+  "teammateRepos": [
+    "https://github.com/felipeperassi"
+  ],
+  "technologies": ["Python", "Arduino"],
+  "year": 2025
+  },
+  {
+    title: "Multiplayer Hangman Game",
+    description: "A personal project built in Python using Pygame. It's a two-player version of the classic Hangman game, featuring a full dictionary word pool, player turn-based guessing, images, background music, and a fun interactive game flow.",
+    videoUrl: "hangman.mp4",
+    githubRepo: "https://github.com/lminervino18/HangmanGame",
+    teammateRepos: [],
+    technologies: ["Python", "Pygame"],
+    year: 2021
+  },
+  {
     title: "Gastandoando",
     description: "A collaborative web app built with React and TypeScript for organizing personal and group expenses, managing savings, and forecasting future spending. Designed to simplify financial planning and sharing within groups.",
     videoUrl: "gastando-ando.mp4",
@@ -51,15 +80,6 @@ export const projects: Project[] = [
     year: 2024
   },
   {
-    title: "Mi Colección de Camisetas",
-    description: "A full-featured web app to manage a personal football jersey collection. Users can upload images, edit detailed information, filter items, and explore interactive statistics and insights about their collection through a modern interface.",
-    videoUrl: "mi-coleccion-camisetas.mp4",
-    githubRepo: "https://github.com/lminervino18/mi-coleccion-camisetas",
-    teammateRepos: [],
-    technologies: ["React", "JavaScript", "CSS", "Java","MySQL"],
-    year: 2024
-  },
-  {
     title: "Fox and Geese Game",
     description: "A multiplayer terminal-based game implemented entirely in x86-64 assembly, where one player controls a fox and the other controls geese. The game logic, rendering, and interaction are all handled at a low level, demonstrating direct memory manipulation and input handling.",
     videoUrl: "zorros-y-ocas.mp4",
@@ -67,15 +87,6 @@ export const projects: Project[] = [
     teammateRepos: [],
     technologies: ["Assembly (x86-64)"],
     year: 2024
-  },
-  {
-    title: "Multiplayer Hangman Game",
-    description: "A personal project built in Python using Pygame. It's a two-player version of the classic Hangman game, featuring a full dictionary word pool, player turn-based guessing, images, background music, and a fun interactive game flow.",
-    videoUrl: "hangman.mp4",
-    githubRepo: "https://github.com/lminervino18/HangmanGame",
-    teammateRepos: [],
-    technologies: ["Python", "Pygame"],
-    year: 2021
   },
   {
     title: "Pokédex App",

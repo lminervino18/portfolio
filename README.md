@@ -16,11 +16,11 @@ This project combines a clean UI with responsive design and subtle interactions,
 
 ### About Me
 
-![About Me](./assets/readme/about-me.png)
+![About Me](./public/assets/readme/about-me.png)
 
 ### Projects
 
-![Projects](./assets/readme/projects.png)
+![Projects](./public/assets/readme/projects.png)
 
 ## Stack and Tooling
 

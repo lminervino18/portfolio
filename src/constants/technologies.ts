@@ -64,5 +64,10 @@ export const technologies: Technology[] = [
     name: "TypeScript",
     logo: "typescript.png",
     url: "https://www.typescriptlang.org/"
+  },
+   {
+    name: "Arduino",
+    logo: "arduino.png",
+    url: "https://www.arduino.cc/"
   }
 ]
