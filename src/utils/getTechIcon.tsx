@@ -13,7 +13,8 @@ export function getTechIcon(tech: string): string {
     "Firebase": "firebase.png",  
     "Rust": "rust.png",
     "Assembly (x86-64)": "asm.png",
-    "Docker": "docker.png"
+    "Docker": "docker.png",
+    "Arduino": "arduino.png",
   }
 
   const fileName = mapping[tech] || tech.toLowerCase().replace(/\s+/g, '') + ".png"

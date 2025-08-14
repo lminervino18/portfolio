@@ -13,7 +13,8 @@ export function getTechLink(tech: string): string {
     "Firebase": "https://firebase.google.com/docs",
     "Rust": "https://www.rust-lang.org/learn",
     "Assembly (x86-64)": "https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html",
-    "Docker": "https://docs.docker.com/"
+    "Docker": "https://docs.docker.com/",
+    "Arduino": "https://www.arduino.cc/"
   }
 
   return links[tech] || "#"
