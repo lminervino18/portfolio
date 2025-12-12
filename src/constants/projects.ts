@@ -44,6 +44,17 @@ export const projects: Project[] = [
     technologies: ["React", "JavaScript", "CSS", "Java","MySQL"],
     year: 2024
   },
+   {
+  title: "YPF Route",
+  description: "A distributed system built in Rust to manage and control fuel consumption for vehicle fleets, featuring multi-node coordination, fault tolerance, offline operation handling, and a command-line interface for administration.",
+  videoUrl: "ypf-ruta.mp4",
+  githubRepo: "https://github.com/lminervino18/ypf-fleet-fuel-distributed-system",
+  teammateRepos: [
+    "https://github.com/alejoordonez02"
+  ],
+  technologies: ["Rust"],
+  year: 2025
+},
   {
   "title": "AI Drawing Arm",
   "description": "An AI-powered robotic arm that interprets natural language prompts and draws symbolic figures on a 14×10 grid using OpenAI and inverse kinematics. The system validates and centers shapes, translates them into optimized servo angles, and controls a dual-arm mechanism via Arduino for precise, coordinated drawing.",
@@ -97,4 +108,5 @@ export const projects: Project[] = [
     technologies: ["Python"],
     year: 2021
   }
+
 ]
