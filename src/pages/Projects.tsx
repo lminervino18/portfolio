@@ -93,7 +93,6 @@ export function Projects() {
       <div className="proj-modal">
         <div className="proj-title-bar">
           <h2>{current.title}</h2>
-          <span className="proj-year">{current.year}</span>
           <a
             href={current.githubRepo}
             target="_blank"
