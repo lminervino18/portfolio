@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Video sources: uploaded to Cloudinary by scripts/upload-videos.mjs, never committed
+videos
