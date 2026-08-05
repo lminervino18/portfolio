@@ -1,4 +1,4 @@
-import { useState, useRef, useCallback, useEffect } from 'react'
+import { useState, useRef, useCallback, useEffect, useMemo } from 'react'
 import { projects } from '../constants/projects'
 import type { Project } from '../constants/projects'
 import { getTechIcon } from '../utils/getTechIcon'
@@ -11,15 +11,40 @@ import './styles/Projects.css'
 const posterOf = (videoUrl: string) => videoUrl.replace(/\.mp4$/, '.jpg')
 
 export function Projects() {
+  const [activeTech, setActiveTech] = useState<string | null>(null)
   const [index, setIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
   const direction = useRef(1)
   const containerRef = useRef<HTMLDivElement>(null!)
 
-  const current: Project = projects[index]
+  // Only technologies shared by more than one project are worth a filter chip:
+  // a chip that always yields a single project is a slower way to click a dot.
+  const filters = useMemo(() => {
+    const counts = new Map<string, number>()
+    for (const project of projects) {
+      for (const tech of project.technologies) {
+        counts.set(tech, (counts.get(tech) ?? 0) + 1)
+      }
+    }
+    return [...counts.entries()]
+      .filter(([, count]) => count > 1)
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .map(([tech]) => tech)
+  }, [])
 
+  const visible = useMemo(
+    () => (activeTech ? projects.filter(p => p.technologies.includes(activeTech)) : projects),
+    [activeTech],
+  )
 
-  
+  const current: Project = visible[index]
+
+  const selectTech = useCallback((tech: string | null) => {
+    direction.current = 1
+    setActiveTech(tech)
+    setIndex(0)
+  }, [])
+
   const goTo = useCallback((targetIndex: number) => {
     direction.current = targetIndex > index ? 1 : -1
     setIndex(targetIndex)
@@ -27,13 +52,13 @@ export function Projects() {
 
   const goNext = useCallback(() => {
     direction.current = 1
-    setIndex(i => (i + 1) % projects.length)
-  }, [])
+    setIndex(i => (i + 1) % visible.length)
+  }, [visible.length])
 
   const goPrev = useCallback(() => {
     direction.current = -1
-    setIndex(i => (i - 1 + projects.length) % projects.length)
-  }, [])
+    setIndex(i => (i - 1 + visible.length) % visible.length)
+  }, [visible.length])
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
@@ -44,8 +69,6 @@ export function Projects() {
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [goNext, goPrev])
-
-
 
   useEffect(() => {
     const vid = videoRef.current
@@ -61,7 +84,7 @@ export function Projects() {
         })
       }
     }
-  }, [index])
+  }, [current.videoUrl])
 
   return (
     <motion.div
@@ -72,23 +95,54 @@ export function Projects() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
     >
       <div className="project-dots">
-        {projects.map((_, i) => (
+        {visible.map((project, i) => (
           <button
-            key={i}
+            key={project.title}
             className={`dot ${i === index ? 'active' : ''}`}
             onClick={() => goTo(i)}
-            aria-label={`Go to project ${i + 1}`}
+            aria-label={`Go to ${project.title}`}
           />
         ))}
       </div>
 
-      <button className="proj-arrow left" onClick={goPrev}>&lsaquo;</button>
+      <button className="proj-arrow left" onClick={goPrev} aria-label="Previous project">
+        &lsaquo;
+      </button>
 
       <div className="proj-modal">
+        <div className="proj-filters" role="group" aria-label="Filter projects by technology">
+          <button
+            className={`proj-filter ${activeTech === null ? 'active' : ''}`}
+            onClick={() => selectTech(null)}
+            aria-pressed={activeTech === null}
+          >
+            All <span className="proj-filter-count">{projects.length}</span>
+          </button>
+          {filters.map(tech => (
+            <button
+              key={tech}
+              className={`proj-filter ${activeTech === tech ? 'active' : ''}`}
+              onClick={() => selectTech(tech)}
+              aria-pressed={activeTech === tech}
+            >
+              <img src={getTechIcon(tech)} alt="" aria-hidden="true" />
+              {tech}
+              <span className="proj-filter-count">
+                {projects.filter(p => p.technologies.includes(tech)).length}
+              </span>
+            </button>
+          ))}
+        </div>
+
         <div className="proj-title-bar">
           <h2>{current.title}</h2>
           <span className="proj-year">{current.year}</span>
-          <a href={current.githubRepo} target="_blank" rel="noopener noreferrer">
+          <a
+            href={current.githubRepo}
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label={`${current.title} on GitHub`}
+          >
             <FaGithub size={26} />
           </a>
         </div>
@@ -178,7 +232,9 @@ export function Projects() {
         </AnimatePresence>
       </div>
 
-      <button className="proj-arrow right" onClick={goNext}>&rsaquo;</button>
+      <button className="proj-arrow right" onClick={goNext} aria-label="Next project">
+        &rsaquo;
+      </button>
     </motion.div>
   )
 }
