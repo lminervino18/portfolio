@@ -44,8 +44,8 @@ function useMousePositionRef(containerRef: RefObject<HTMLElement>) {
 }
 
 interface VariableProximityProps extends HTMLAttributes<HTMLSpanElement> {
-  children: string; // texto completo
-  excludeWords?: string[]; // palabras a excluir del efecto
+  children: string;
+  excludeWords?: string[];
   fromFontVariationSettings: string;
   toFontVariationSettings: string;
   containerRef: RefObject<HTMLElement>;

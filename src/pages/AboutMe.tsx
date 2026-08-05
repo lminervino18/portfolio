@@ -7,9 +7,9 @@ import { motion } from 'framer-motion'
 import { useMemo, useRef } from 'react'
 import VariableProximity from '../components/VariableProximity'
 
-  export function AboutMe() {
-    const containerRef = useRef<HTMLDivElement>(null)
-    const age = useMemo(() => {
+export function AboutMe() {
+  const containerRef = useRef<HTMLDivElement>(null)
+  const age = useMemo(() => {
     const birthDate = new Date('2000-07-13')
     return Math.floor((Date.now() - birthDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25))
   }, [])
