@@ -8,6 +8,8 @@ import VariableProximity from '../components/VariableProximity'
 import { getTechLink } from '../utils/getTechLink'
 import './styles/Projects.css'
 
+const posterOf = (videoUrl: string) => videoUrl.replace(/\.mp4$/, '.jpg')
+
 export function Projects() {
   const [index, setIndex] = useState(0)
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -106,6 +108,8 @@ export function Projects() {
                 muted
                 controls
                 playsInline
+                preload="metadata"
+                poster={`/assets/projects_posters/${posterOf(current.videoUrl)}`}
               >
                 <source src={`/assets/projects_videos/${current.videoUrl}`} type="video/mp4" />
                 Your browser does not support the video tag.
