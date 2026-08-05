@@ -3,9 +3,8 @@
   --violet-soft: #d18aff;
 }
 
-/* The top offset now belongs to the filter row, which sits above the carousel. */
 .proj-wrapper {
-  margin-top: 0;
+  margin-top: 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -90,65 +89,13 @@
   align-self: center;
 }
 
-.proj-filters {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 0.5rem;
-  margin: 80px auto 2.25rem;
-  padding: 0 1.5rem;
-  max-width: 1100px;
-}
 
-.proj-filter {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  font: inherit;
-  font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.75);
-  background: transparent;
-  border: 1px solid rgba(128, 0, 255, 0.45);
-  border-radius: 999px;
-  padding: 0.3rem 0.75rem;
-  cursor: pointer;
-  transition:
-    color 0.2s,
-    border-color 0.2s,
-    background 0.2s;
-}
 
-.proj-filter img {
-  width: 18px;
-  height: 18px;
-  object-fit: contain;
-}
 
-.proj-filter-count {
-  font-size: 0.75rem;
-  color: rgba(255, 255, 255, 0.45);
-  font-variant-numeric: tabular-nums;
-}
 
-.proj-filter:hover {
-  color: #fff;
-  border-color: var(--violet);
-}
 
-.proj-filter.active {
-  color: #fff;
-  border-color: var(--violet);
-  background: rgba(128, 0, 255, 0.25);
-}
 
-.proj-filter.active .proj-filter-count {
-  color: rgba(255, 255, 255, 0.75);
-}
 
-.proj-filter:focus-visible {
-  outline: 2px solid var(--violet-soft);
-  outline-offset: 2px;
-}
 
 .proj-content-grid {
   display: grid;
@@ -287,19 +234,7 @@
     font-size: 1.5rem;
   }
 
-  .proj-filters {
-    gap: 0.4rem;
-    margin: 60px auto 1.25rem;
-    padding: 0 1rem;
-  }
 
-  /* global.css stretches every button to width:100% under 768px; the chips are
-     a wrapping row and must keep their content width. */
-  .proj-filter {
-    width: auto;
-    font-size: 0.78rem;
-    padding: 0.25rem 0.6rem;
-  }
 
   .proj-video-container {
     aspect-ratio: 16 / 9;
