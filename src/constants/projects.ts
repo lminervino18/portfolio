@@ -10,6 +10,50 @@ export interface Project {
 
 export const projects: Project[] = [
   {
+    title: "Oxidized Neural Orchestra",
+    description: "My final degree project: a fully distributed system for training neural networks, written from scratch in Rust. It implements three distributed training strategies — Parameter Server, All-Reduce, and a Strategy Switch that promotes workers into parameter servers once gradients converge — on top of a custom networking layer, and exposes them through an interactive TUI, Python bindings via PyO3, and a headless binary for Docker deployments.",
+    videoUrl: "oxidized-neural-orchestra.mp4",
+    githubRepo: "https://github.com/lminervino18/oxidized-neural-orchestra",
+    teammateRepos: [
+      "https://github.com/mbianchif",
+      "https://github.com/alejoordonez02"
+    ],
+    technologies: ["Rust", "Python", "Docker"],
+    year: 2026
+  },
+  {
+    title: "Solares Web",
+    description: "The official website of a football club, designed and shipped end to end on my own. Sports data lives in a public spreadsheet and is revalidated on every visit, goal clips are delivered from Cloudinary under content-hashed ids with perceptual duplicate detection, and every asset pipeline is idempotent — publishing new content never requires touching a component. Covered by unit tests and cross-browser end-to-end tests.",
+    videoUrl: "solares-web.mp4",
+    githubRepo: "https://github.com/lminervino18/solares-web",
+    teammateRepos: [],
+    technologies: ["React", "TypeScript", "Tailwind CSS", "Vite", "Playwright"],
+    year: 2026
+  },
+  {
+    title: "Money Laundering Analysis",
+    description: "A distributed pipeline that resolves five analytical use cases over large transaction datasets, spread across containerized nodes that communicate through RabbitMQ. It survives node failures through supervisors and automatic recovery, and ships a chaos monkey that kills random nodes on a live cluster so the results can be validated against an oracle under failure.",
+    videoUrl: "money-laundering-analysis.mp4",
+    githubRepo: "https://github.com/alejoordonez02/distribuidos-tp-money-laundering-analysis",
+    teammateRepos: [
+      "https://github.com/alejoordonez02",
+      "https://github.com/FedericoValsagna"
+    ],
+    technologies: ["Python", "RabbitMQ", "Docker"],
+    year: 2026
+  },
+  {
+    title: "Researchers Page - CONICET",
+    description: "A web platform where a CONICET research group publishes its scientific work: research lines, members, publications, news, a registration flow for people who want to take part in ongoing experiments, and an informal section with email-based login and comments. Built as a React frontend over a Spring Boot REST API backed by MySQL.",
+    videoUrl: "researchers-page-conicet.mp4",
+    githubRepo: "https://github.com/lminervino18/researchers-page-conicet",
+    teammateRepos: [
+      "https://github.com/Manuel-Pol"
+    ],
+    technologies: ["Java", "Spring Boot", "React", "TypeScript", "MySQL"],
+    year: 2025
+  },
+  {
     title: "Rustic Airlines",
     description: "A distributed flight management system developed in Rust, featuring a Cassandra-compatible database engine, real-time tracking on a world map, and a flight simulator. It supports strong and weak consistency levels, multi-node replication, and fault tolerance.",
     videoUrl: "rustic-airlines.mp4",
