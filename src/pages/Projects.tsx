@@ -1,11 +1,10 @@
 import { useState, useRef, useCallback, useEffect } from 'react'
 import { projects } from '../constants/projects'
 import type { Project } from '../constants/projects'
-import { getTechIcon } from '../utils/getTechIcon'
+import { technology } from '../constants/technologies'
 import { FaGithub } from 'react-icons/fa'
 import { motion, AnimatePresence } from 'framer-motion'
 import VariableProximity from '../components/VariableProximity'
-import { getTechLink } from '../utils/getTechLink'
 import './styles/Projects.css'
 
 // Videos are delivered from Cloudinary (`q_auto` picks the bitrate per client)
@@ -143,21 +142,14 @@ export function Projects() {
                 <div className="proj-tech">
                   <h3>Technologies</h3>
                   <div className="tech-icons">
-                    {current.technologies.map(tech => (
-                      <a
-                        key={tech}
-                        href={getTechLink(tech)}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        <img
-                          src={getTechIcon(tech)}
-                          alt={tech}
-                          title={tech}
-                          className="tech-icon"
-                        />
-                      </a>
-                    ))}
+                    {current.technologies.map(name => {
+                      const { icon, url } = technology(name)
+                      return (
+                        <a key={name} href={url} target="_blank" rel="noopener noreferrer">
+                          <img src={icon} alt={name} title={name} className="tech-icon" />
+                        </a>
+                      )
+                    })}
                   </div>
 
                 </div>

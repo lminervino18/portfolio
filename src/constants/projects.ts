@@ -1,10 +1,12 @@
+import type { TechnologyName } from './technologies'
+
 export interface Project {
   title: string
   description: string
   videoUrl: string
   githubRepo: string
   teammateRepos: string[]
-  technologies: string[],
+  technologies: TechnologyName[],
   year: number
 }
 
