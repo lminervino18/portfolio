@@ -8,6 +8,11 @@ import VariableProximity from '../components/VariableProximity'
 import { getTechLink } from '../utils/getTechLink'
 import './styles/Projects.css'
 
+// Videos are delivered from Cloudinary (`q_auto` picks the bitrate per client)
+// so the repository and the deploy stay free of ~80 MB of media.
+// Uploaded by scripts/upload-videos.mjs; the cloud name is public delivery data.
+const VIDEO_CDN = 'https://res.cloudinary.com/aff9xkft/video/upload/q_auto/portfolio'
+
 const posterOf = (videoUrl: string) => videoUrl.replace(/\.mp4$/, '.jpg')
 
 export function Projects() {
@@ -166,7 +171,7 @@ export function Projects() {
                 preload="metadata"
                 poster={`/assets/projects_posters/${posterOf(current.videoUrl)}`}
               >
-                <source src={`/assets/projects_videos/${current.videoUrl}`} type="video/mp4" />
+                <source src={`${VIDEO_CDN}/${current.videoUrl}`} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </div>
