@@ -15,6 +15,12 @@ export function getTechIcon(tech: string): string {
     "Assembly (x86-64)": "asm.png",
     "Docker": "docker.png",
     "Arduino": "arduino.png",
+    "Java": "java.png",
+    "Spring Boot": "springboot.png",
+    "Tailwind CSS": "tailwind.png",
+    "Vite": "vite.png",
+    "Playwright": "playwright.png",
+    "RabbitMQ": "rabbitmq.png",
   }
 
   const fileName = mapping[tech] || tech.toLowerCase().replace(/\s+/g, '') + ".png"

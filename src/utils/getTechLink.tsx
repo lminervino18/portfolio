@@ -15,7 +15,12 @@ export function getTechLink(tech: string): string {
     "Assembly (x86-64)": "https://www.intel.com/content/www/us/en/docs/intrinsics-guide/index.html",
     "Docker": "https://docs.docker.com/",
     "Arduino": "https://www.arduino.cc/",
-    "Java": "https://docs.oracle.com/en/java/javase/"
+    "Java": "https://docs.oracle.com/en/java/javase/",
+    "Spring Boot": "https://docs.spring.io/spring-boot/index.html",
+    "Tailwind CSS": "https://tailwindcss.com/docs",
+    "Vite": "https://vite.dev/guide/",
+    "Playwright": "https://playwright.dev/docs/intro",
+    "RabbitMQ": "https://www.rabbitmq.com/docs"
   }
 
   return links[tech] || "#"
