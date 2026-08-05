@@ -293,7 +293,10 @@
     padding: 0 1rem;
   }
 
+  /* global.css stretches every button to width:100% under 768px; the chips are
+     a wrapping row and must keep their content width. */
   .proj-filter {
+    width: auto;
     font-size: 0.78rem;
     padding: 0.25rem 0.6rem;
   }
