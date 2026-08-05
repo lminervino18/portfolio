@@ -1,19 +1,10 @@
-import React from 'react'
 import { technologies } from '../constants/technologies'
-import type { Technology } from '../constants/technologies'
-
 import './styles/TechGrid.css'
 
-interface Props {
-  items?: Technology[]
-}
-
-export const TechGrid: React.FC<Props> = ({ items }) => {
-  const list = items || technologies
-
+export function TechGrid() {
   return (
     <div className="tech-grid">
-      {list.map((tech: Technology) => (
+      {technologies.map(tech => (
         <a
           key={tech.name}
           className="tech-card"
@@ -31,5 +22,3 @@ export const TechGrid: React.FC<Props> = ({ items }) => {
     </div>
   )
 }
-
-export default TechGrid
