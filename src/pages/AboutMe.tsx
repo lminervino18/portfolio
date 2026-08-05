@@ -57,7 +57,7 @@ import VariableProximity from '../components/VariableProximity'
                 toFontVariationSettings="'wght' 900"
                 containerRef={containerRef as React.RefObject<HTMLElement>}
               >
-                I'm in my final year of
+                I hold a degree in
               </VariableProximity>{' '}
               <a href="/assets/me/ing.pdf" target="_blank" className="link-highlight">
                 Computer Engineering
@@ -67,7 +67,7 @@ import VariableProximity from '../components/VariableProximity'
                 toFontVariationSettings="'wght' 900"
                 containerRef={containerRef as React.RefObject<HTMLElement>}
               >
-                at
+                from
               </VariableProximity>{' '}
               <span className="fiuba-highlight">
                 FIUBA
