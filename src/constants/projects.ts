@@ -1,7 +1,7 @@
 export interface Project {
   title: string
   description: string
-  videoUrl: string 
+  videoUrl: string
   githubRepo: string
   teammateRepos: string[]
   technologies: string[],
@@ -31,29 +31,6 @@ export const projects: Project[] = [
     year: 2026
   },
   {
-    title: "Money Laundering Analysis",
-    description: "A distributed pipeline that resolves five analytical use cases over large transaction datasets, spread across containerized nodes that communicate through RabbitMQ. It survives node failures through supervisors and automatic recovery, and ships a chaos monkey that kills random nodes on a live cluster so the results can be validated against an oracle under failure.",
-    videoUrl: "money-laundering-analysis.mp4",
-    githubRepo: "https://github.com/alejoordonez02/distribuidos-tp-money-laundering-analysis",
-    teammateRepos: [
-      "https://github.com/alejoordonez02",
-      "https://github.com/FedericoValsagna"
-    ],
-    technologies: ["Python", "RabbitMQ", "Docker"],
-    year: 2026
-  },
-  {
-    title: "Researchers Page - CONICET",
-    description: "A web platform where a CONICET research group publishes its scientific work: research lines, members, publications, news, a registration flow for people who want to take part in ongoing experiments, and an informal section with email-based login and comments. Built as a React frontend over a Spring Boot REST API backed by MySQL.",
-    videoUrl: "researchers-page-conicet.mp4",
-    githubRepo: "https://github.com/lminervino18/researchers-page-conicet",
-    teammateRepos: [
-      "https://github.com/Manuel-Pol"
-    ],
-    technologies: ["Java", "Spring Boot", "React", "TypeScript", "MySQL"],
-    year: 2025
-  },
-  {
     title: "Rustic Airlines",
     description: "A distributed flight management system developed in Rust, featuring a Cassandra-compatible database engine, real-time tracking on a world map, and a flight simulator. It supports strong and weak consistency levels, multi-node replication, and fault tolerance.",
     videoUrl: "rustic-airlines.mp4",
@@ -80,6 +57,51 @@ export const projects: Project[] = [
     year: 2025
   },
   {
+    title: "Money Laundering Analysis",
+    description: "A distributed pipeline that resolves five analytical use cases over large transaction datasets, spread across containerized nodes that communicate through RabbitMQ. It survives node failures through supervisors and automatic recovery, and ships a chaos monkey that kills random nodes on a live cluster so the results can be validated against an oracle under failure.",
+    videoUrl: "money-laundering-analysis.mp4",
+    githubRepo: "https://github.com/alejoordonez02/distribuidos-tp-money-laundering-analysis",
+    teammateRepos: [
+      "https://github.com/alejoordonez02",
+      "https://github.com/FedericoValsagna"
+    ],
+    technologies: ["Python", "RabbitMQ", "Docker"],
+    year: 2026
+  },
+  {
+    title: "Researchers Page - CONICET",
+    description: "A web platform where a CONICET research group publishes its scientific work: research lines, members, publications, news, a registration flow for people who want to take part in ongoing experiments, and an informal section with email-based login and comments. Built as a React frontend over a Spring Boot REST API backed by MySQL.",
+    videoUrl: "researchers-page-conicet.mp4",
+    githubRepo: "https://github.com/lminervino18/researchers-page-conicet",
+    teammateRepos: [
+      "https://github.com/Manuel-Pol"
+    ],
+    technologies: ["Java", "Spring Boot", "React", "TypeScript", "MySQL"],
+    year: 2025
+  },
+  {
+    title: "YPF Route",
+    description: "A distributed system built in Rust to manage and control fuel consumption for vehicle fleets, featuring multi-node coordination, fault tolerance, offline operation handling, and a command-line interface for administration.",
+    videoUrl: "ypf-ruta.mp4",
+    githubRepo: "https://github.com/lminervino18/ypf-fleet-fuel-distributed-system",
+    teammateRepos: [
+      "https://github.com/alejoordonez02"
+    ],
+    technologies: ["Rust"],
+    year: 2025
+  },
+  {
+    title: "AI Drawing Arm",
+    description: "An AI-powered robotic arm that interprets natural language prompts and draws symbolic figures on a 14×10 grid using OpenAI and inverse kinematics. The system validates and centers shapes, translates them into optimized servo angles, and controls a dual-arm mechanism via Arduino for precise, coordinated drawing.",
+    videoUrl: "ai-arm-drawing.mp4",
+    githubRepo: "https://github.com/lminervino18/ai-arm-drawing",
+    teammateRepos: [
+      "https://github.com/felipeperassi"
+    ],
+    technologies: ["Python", "Arduino"],
+    year: 2025
+  },
+  {
     title: "Mi Colección de Camisetas",
     description: "A full-featured web app to manage a personal football jersey collection. Users can upload images, edit detailed information, filter items, and explore interactive statistics and insights about their collection through a modern interface.",
     videoUrl: "mi-coleccion-camisetas.mp4",
@@ -87,37 +109,6 @@ export const projects: Project[] = [
     teammateRepos: [],
     technologies: ["React", "JavaScript", "CSS", "Java","MySQL"],
     year: 2024
-  },
-   {
-  title: "YPF Route",
-  description: "A distributed system built in Rust to manage and control fuel consumption for vehicle fleets, featuring multi-node coordination, fault tolerance, offline operation handling, and a command-line interface for administration.",
-  videoUrl: "ypf-ruta.mp4",
-  githubRepo: "https://github.com/lminervino18/ypf-fleet-fuel-distributed-system",
-  teammateRepos: [
-    "https://github.com/alejoordonez02"
-  ],
-  technologies: ["Rust"],
-  year: 2025
-},
-  {
-  "title": "AI Drawing Arm",
-  "description": "An AI-powered robotic arm that interprets natural language prompts and draws symbolic figures on a 14×10 grid using OpenAI and inverse kinematics. The system validates and centers shapes, translates them into optimized servo angles, and controls a dual-arm mechanism via Arduino for precise, coordinated drawing.",
-  "videoUrl": "ai-arm-drawing.mp4",
-  "githubRepo": "https://github.com/lminervino18/ai-arm-drawing",
-  "teammateRepos": [
-    "https://github.com/felipeperassi"
-  ],
-  "technologies": ["Python", "Arduino"],
-  "year": 2025
-  },
-  {
-    title: "Multiplayer Hangman Game",
-    description: "A personal project built in Python using Pygame. It's a two-player version of the classic Hangman game, featuring a full dictionary word pool, player turn-based guessing, images, background music, and a fun interactive game flow.",
-    videoUrl: "hangman.mp4",
-    githubRepo: "https://github.com/lminervino18/HangmanGame",
-    teammateRepos: [],
-    technologies: ["Python", "Pygame"],
-    year: 2021
   },
   {
     title: "Gastandoando",
@@ -144,6 +135,15 @@ export const projects: Project[] = [
     year: 2024
   },
   {
+    title: "Multiplayer Hangman Game",
+    description: "A personal project built in Python using Pygame. It's a two-player version of the classic Hangman game, featuring a full dictionary word pool, player turn-based guessing, images, background music, and a fun interactive game flow.",
+    videoUrl: "hangman.mp4",
+    githubRepo: "https://github.com/lminervino18/HangmanGame",
+    teammateRepos: [],
+    technologies: ["Python", "Pygame"],
+    year: 2021
+  },
+  {
     title: "Pokédex App",
     description: "A project written in Python that simulates a Pokédex. Users can browse Pokémon, search by name, and build custom teams from the collection. It features an interactive interface and image-based display using a custom graphical library.",
     videoUrl: "pokedex.mp4",
@@ -152,5 +152,4 @@ export const projects: Project[] = [
     technologies: ["Python"],
     year: 2021
   }
-
 ]
