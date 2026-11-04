@@ -3,6 +3,8 @@ import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import { FaPlus } from 'react-icons/fa'
 import './styles/ExperienceCard.css'
 
+const LANDING_URL = 'https://sociovirtual.ai/'
+
 const specialties = ['AI Agents', 'Full Stack', 'DevOps', 'System Architecture']
 
 export function ExperienceCard() {
@@ -12,21 +14,24 @@ export function ExperienceCard() {
 
   return (
     <div className={`experience-card ${expanded ? 'expanded' : ''}`}>
-      <button
-        type="button"
-        className="experience-toggle"
-        aria-expanded={expanded}
-        aria-controls={expanded ? panelId : undefined}
-        onClick={() => setExpanded(isExpanded => !isExpanded)}
-      >
-        <img
-          src="/assets/me/socio-virtual.png"
-          alt=""
-          width={200}
-          height={200}
-          className="experience-logo"
-        />
-        <span className="experience-title">
+      <div className="experience-header">
+        <a
+          href={LANDING_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="experience-logo-link"
+          aria-hidden="true"
+          tabIndex={-1}
+        >
+          <img
+            src="/assets/me/socio-virtual.png"
+            alt=""
+            width={200}
+            height={200}
+            className="experience-logo"
+          />
+        </a>
+        <p className="experience-title">
           <AnimatePresence mode="wait" initial={false}>
             <motion.span
               key={expanded ? 'role' : 'status'}
@@ -38,18 +43,33 @@ export function ExperienceCard() {
             >
               {expanded ? (
                 <>
-                  <strong>AI Shipper</strong> @ Socio Virtual
+                  <strong>AI Shipper</strong> @{' '}
                 </>
               ) : (
-                <>
-                  Currently building at <strong>Socio Virtual</strong>
-                </>
+                'Currently building at '
               )}
+              <a
+                href={LANDING_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="link-highlight experience-link"
+              >
+                Socio Virtual
+              </a>
             </motion.span>
           </AnimatePresence>
-        </span>
-        <FaPlus className="experience-icon" aria-hidden="true" />
-      </button>
+        </p>
+        <button
+          type="button"
+          className="experience-toggle"
+          aria-label="Socio Virtual role details"
+          aria-expanded={expanded}
+          aria-controls={expanded ? panelId : undefined}
+          onClick={() => setExpanded(isExpanded => !isExpanded)}
+        >
+          <FaPlus className="experience-icon" aria-hidden="true" />
+        </button>
+      </div>
 
       <AnimatePresence initial={false}>
         {expanded && (
