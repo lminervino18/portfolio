@@ -1,6 +1,7 @@
 import './styles/AboutMe.css'
 import { TechGrid } from '../components/TechGrid'
 import { SocialLinks } from '../components/SocialLinks'
+import { ExperienceCard } from '../components/ExperienceCard'
 import CountUp from '../components/CountUp'
 import TrueFocus from '../components/TrueFocus'
 import { motion } from 'framer-motion'
@@ -86,6 +87,8 @@ export function AboutMe() {
               </VariableProximity>
             </div>
           </div>
+
+          <ExperienceCard />
 
           <section className="tech-section">
             <h2>Technologies I Use</h2>
