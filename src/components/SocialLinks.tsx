@@ -29,7 +29,7 @@ export function SocialLinks() {
         </a>
       </li>
       <li>
-        <a href="https://www.linkedin.com/in/lorenzo-minervino-b309a5342/" target="_blank" rel="noopener noreferrer">
+        <a href="https://www.linkedin.com/in/lminervino18/" target="_blank" rel="noopener noreferrer">
           <FaLinkedin className="social-icon" />
         </a>
       </li>

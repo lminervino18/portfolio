@@ -75,6 +75,6 @@ This project uses React Bits, a modern component library offering composable and
 
 ## Contact
 
-You can connect with me on [LinkedIn](https://www.linkedin.com/in/lorenzominervino/) or visit my [GitHub](https://github.com/lminervino18).
+You can connect with me on [LinkedIn](https://www.linkedin.com/in/lminervino18/) or visit my [GitHub](https://github.com/lminervino18).
 
 Email: lminervino18@gmail.com
