@@ -58,11 +58,16 @@ export function AboutMe() {
                 toFontVariationSettings="'wght' 900"
                 containerRef={containerRef as React.RefObject<HTMLElement>}
               >
-                I hold a degree in
+                I'm a
               </VariableProximity>{' '}
-              <a href="/assets/me/ing.pdf" target="_blank" className="link-highlight">
-                Computer Engineering
-              </a>{' '}
+              <span className="photo-highlight">
+                Computer Engineer
+                <img
+                  src="/assets/me/graduation.jpeg"
+                  alt="Graduation photo"
+                  className="preview-image"
+                />
+              </span>{' '}
               <VariableProximity
                 fromFontVariationSettings="'wght' 300"
                 toFontVariationSettings="'wght' 900"
@@ -70,7 +75,7 @@ export function AboutMe() {
               >
                 from
               </VariableProximity>{' '}
-              <span className="fiuba-highlight">
+              <span className="photo-highlight">
                 FIUBA
                 <img
                   src="/assets/me/fiuba.jpeg"
